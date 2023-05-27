@@ -23,17 +23,14 @@ Route::get('/about', function () {
     return view('about');
 });
 
+
 // Posts
 Route::get('/posts', function () {
-    return "<h1>main posts</h1>";
-});
-
-// Posts 1
-Route::get('/posts/1', function () {
-    return "<h1>Posts 1</h1>";
+    return '<h1>番目リスト</h1>';
 });
 
 // post 1, 2, 3 ...
-Route::get('/posts/{$id}', function ($id) {
-    return '<h1>' . $id .  '1番';
+Route::get('/posts/{id}', function ($id) {
+    // return '<h1>' . $id . '番目の記事</h1>';
+    return view('post', ['id' => $id]); //post blade
 });
