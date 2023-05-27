@@ -35,5 +35,5 @@ Route::get('/posts/1', function () {
 
 // post 1, 2, 3 ...
 Route::get('/posts/{$id}', function ($id) {
-    return '<h1>' . $id .  'text';
+    return '<h1>' . $id .  '1番';
 });
